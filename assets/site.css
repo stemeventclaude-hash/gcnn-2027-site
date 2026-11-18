@@ -2847,3 +2847,11 @@ body.hx-fixed .hx--inner .hx-nav{background:#faf8f3!important;padding:6px 100px!
 @media (max-width:1100px){.ps-sec--page .ps-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.ps-sec--page .ps-grid{grid-template-columns:1fr}.ps-card--full{padding:22px 0!important}}
 @media (min-width:1101px){.ps-sec--page .ps-card:nth-child(3n+1):nth-last-child(-n+3),.ps-sec--page .ps-card:nth-child(3n+1):nth-last-child(-n+3)~.ps-card{border-bottom:0}.ps-sec--page .ps-card:last-child{border-right:0}}
+
+/* guidelines: templates under Key dates; group chips as a horizontal row */
+.ph__dl{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:440px;margin:12px 0 0 auto}
+.ph__dl .dl{margin:0}
+.gl-wrap{display:block}
+.gl-chips{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin:0 0 22px;padding:14px 18px;border:1px solid #e6dccb;border-radius:16px;background:#fff}
+.gl-chips .chips{display:flex;flex-direction:row;flex-wrap:wrap;gap:10px;margin:0}
+@media (max-width:900px){.ph__dl{margin:12px 0 0;max-width:none}}
