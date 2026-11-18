@@ -1670,3 +1670,7 @@ html{scroll-padding-top:200px}
 .hq__grid .hq__title{font-size:clamp(2.6rem,5.2vw,5.2rem)}
 
 .hq__grid .hq__title{font-size:clamp(2.8rem,5.8vw,5.8rem);line-height:1.1}
+
+/* theme + details aligned left with the title */
+.hq__grid .hq__theme{align-self:flex-start;margin-left:0;margin-right:0;text-align:left}
+.hq__grid .hq__meta{align-self:flex-start;justify-content:flex-start}
