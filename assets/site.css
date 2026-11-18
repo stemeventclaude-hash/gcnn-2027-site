@@ -2179,3 +2179,6 @@ html,body{overflow-anchor:none}
 @media (max-width:1080px){.hqb{margin:120px auto 20px}}
 @media (prefers-reduced-motion:reduce){.hqb__hang,.hqb__sheen,.hqb__date b{animation:none}}
 .hqb__strap{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 45%);mask-image:linear-gradient(180deg,transparent 0,#000 45%)}
+
+/* skyline + waves removed from hero */
+.hq__sky{display:none!important}
