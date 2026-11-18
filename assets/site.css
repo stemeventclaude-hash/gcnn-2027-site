@@ -2754,3 +2754,6 @@ html{scroll-padding-top:150px}
 
 .faq__intro{margin:0 0 22px;font-size:1.02rem;line-height:1.65;color:#5f5a52}
 .ps-sec--page{padding-top:40px}
+
+.ps-heading--fs{font-size:clamp(2.2rem,4vw,3.4rem);letter-spacing:-.035em}
+.ps-heading--fs em{font-style:normal;color:#8a6a3b}
