@@ -2868,3 +2868,11 @@ body.hx-fixed .hx--inner .hx-nav{background:#faf8f3!important;padding:6px 100px!
 /* hero text stays level with the Key dates panel when templates sit under it */
 .ph__grid:has(.ph__dl){align-items:start}
 .ph__grid:has(.ph__dl)>div:first-child{padding-top:40px}
+
+/* abstract page: resources row above the form */
+.abs-res{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;width:100%;max-width:900px}
+.abs-res .dl{margin:0}
+.dl--bro{width:100%;border:1px solid #e6dccb;background:#fff;cursor:pointer;font:inherit;text-align:left}
+.ext--bro{display:grid;place-items:center;background:#1c2430}
+.ext--bro svg{width:20px;height:20px;fill:none;stroke:#e6cfa6;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:700px){.abs-res{grid-template-columns:1fr}}
