@@ -2257,3 +2257,10 @@ html,body{overflow-anchor:none}
 
 /* Info dropdown: 3 items, single column */
 #nm3{grid-template-columns:1fr!important;width:280px!important;min-width:0!important;column-count:1}
+
+/* top strip: deadline pill on the left (logo line), Contact/Terms alone in the right corner */
+@media (min-width:1121px){
+  .hd2__top .hd2__util.tb2{justify-content:space-between!important;padding:0 24px 0 100px!important}
+  .tb2__rot{order:1;justify-items:start;padding-right:0;border-right:0}
+  .tb2__links{order:2;margin-left:auto}
+}
