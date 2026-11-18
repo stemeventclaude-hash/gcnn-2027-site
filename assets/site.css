@@ -1613,3 +1613,13 @@ html{scroll-padding-top:200px}
 .hq__tag span{font-size:.82rem;color:#6b7280}
 @media (max-width:1080px){.hq__grid{grid-template-columns:1fr;min-height:0}.hq__art{height:380px}.hq__arch{height:360px;width:300px}.hq__ring{width:380px;height:380px}}
 @media (max-width:600px){.hq__art{height:320px}.hq__arch{height:300px;width:240px}.hq__ring{width:310px;height:310px}}
+/* hero: no picture; text centred inside the left half */
+.hq__grid{grid-template-columns:1fr 1fr;min-height:420px}
+.hq__grid .hq__in{align-items:center;text-align:center}
+.hq__grid .hq__eyebrow span:first-child{display:block}
+.hq__grid .hq__title,.hq__grid .hq__theme{margin-left:auto;margin-right:auto}
+.hq__grid .hq__meta{justify-content:center}
+@media (max-width:1080px){.hq__grid{grid-template-columns:1fr;min-height:0}}
+.hq__grid .hq__theme{text-wrap:balance;max-width:560px}
+.hq__grid .hq__meta li:last-child{flex-basis:100%;justify-content:center;margin-top:6px}
+.hq__grid .hq__meta li:last-child::before{display:none}
