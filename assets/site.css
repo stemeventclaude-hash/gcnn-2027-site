@@ -1777,3 +1777,12 @@ html{scroll-padding-top:200px}
   .sn-copy h4{font-size:19px}
 }
 .sn-head .sn-eye{color:#8a6a3b!important;font-size:11px!important}
+
+/* smooth page-to-page navigation (like the live Next.js site) */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:vtout .22s ease both}
+::view-transition-new(root){animation:vtin .32s ease both}
+@keyframes vtout{to{opacity:0}}
+@keyframes vtin{from{opacity:0;transform:translateY(8px)}}
+.hd2{view-transition-name:site-header}
+@media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}

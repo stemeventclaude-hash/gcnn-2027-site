@@ -324,6 +324,15 @@
     sx.addEventListener('mouseleave', function () { fl.classList.remove('is-on'); cancelAnimationFrame(raf); raf = null; });
   });
 
+  /* Prefetch internal pages on hover so clicks open instantly */
+  var seen = {};
+  document.addEventListener('pointerover', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="/"]');
+    if (!a || a.target || seen[a.pathname]) return;
+    seen[a.pathname] = 1;
+    var l = document.createElement('link'); l.rel = 'prefetch'; l.href = a.pathname; document.head.appendChild(l);
+  }, { passive: true });
+
   /* Local-preview forms */
   $$('form[data-local]').forEach(function (f) {
     f.addEventListener('submit', function (e) {
