@@ -2717,3 +2717,4 @@ html{scroll-padding-top:150px}
 @media (max-width:540px){.ps-card{border-right:0;padding:20px 0}.ps-card:last-child{border-bottom:0}}
 .ps-grid{align-items:stretch}
 .ps-card{height:100%;align-self:stretch}
+.ps-sec--page{padding-top:64px}
