@@ -2619,3 +2619,14 @@ html{scroll-padding-top:150px}
 @media (max-width:1080px){.fs-card{flex-basis:calc((100% - 2 * var(--fs-gap)) / 3)}}
 @media (max-width:640px){.fs-card{flex-basis:calc((100% - var(--fs-gap)) / 2)}.fs-card:nth-child(2n){margin-top:14px}.fs-card__back{padding:14px 12px}.fs-back__name{font-size:.88rem}.fs-back__aff{font-size:.7rem;-webkit-line-clamp:3}.fs-back__talk{font-size:.74rem;-webkit-line-clamp:4}}
 @media (prefers-reduced-motion:reduce){.fs-flip{transition:none}}
+
+/* speaker cards: country pill in the top-right corner (off the face), details chip top-left */
+.fs-flip .fs-card__country{position:absolute;top:12px;right:12px;margin:0;z-index:4;padding:4px 10px;font-size:.7rem;background:rgba(28,36,48,.55)}
+.fs-card__hint{right:auto;left:12px}
+.fs-flip .fs-card__body{position:static}
+.fs-flip .fs-card__inner{position:absolute}
+.fs-flip .fs-card__name{position:absolute;left:18px;right:18px;bottom:52px;margin:0}
+.fs-flip .fs-card__affiliation{position:absolute;left:18px;right:18px;bottom:16px;min-height:2.9em}
+.fs-flip .fs-card__body{transform:none}
+.fs-flip .fs-card__name,.fs-flip .fs-card__affiliation{z-index:4}
+.fs-flip .fs-card__shade{z-index:3}
