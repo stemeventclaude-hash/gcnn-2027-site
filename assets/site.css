@@ -2039,3 +2039,5 @@ html,body{overflow-anchor:none}
 .hq{padding-bottom:0}
 .hq__sky{display:block;margin-bottom:0!important}
 .hq__ground{stroke-width:1.6;opacity:.85}
+/* river waves back under the skyline */
+.hq__river{display:inline}
