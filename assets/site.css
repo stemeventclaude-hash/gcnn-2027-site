@@ -1943,3 +1943,6 @@ html{scroll-padding-top:200px}
 .hq__sky{margin-top:6px!important}
 @media (max-width:1080px){.hq__grid{grid-template-columns:1fr!important}.hq__art2{display:none}.hq__grid::before{display:none}}
 @media (prefers-reduced-motion:reduce){.hq__orbit,.hq__yr{animation:none!important}.hq__yr{opacity:1}}
+
+/* stop scroll anchoring from fighting the shrinking sticky header */
+html,body{overflow-anchor:none}

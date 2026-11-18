@@ -5,7 +5,12 @@
 
   /* Sticky header shadow */
   var hdr = $('#hdr');
-  var onScroll = function () { hdr.classList.toggle('is-stuck', window.scrollY > 10); };
+  /* hysteresis: shrink after 120px, grow back only near the top, so the 26px height change can't make it flip-flop */
+  var onScroll = function () {
+    var y = window.scrollY, stuck = hdr.classList.contains('is-stuck');
+    if (!stuck && y > 120) hdr.classList.add('is-stuck');
+    else if (stuck && y < 8) hdr.classList.remove('is-stuck');
+  };
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
   /* Mobile menu */
