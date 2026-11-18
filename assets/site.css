@@ -2564,3 +2564,15 @@ body.hx-fixed .hx2 .hx-nav{border-radius:0}
 @media (prefers-reduced-motion:reduce){.th3__ring--d,.th3__net path,.th3__dot circle{animation:none}}
 .th3{padding-top:30px;background:linear-gradient(180deg,#1c2430 0,#1c2430 110px,#faf8f3 110px,#f4efe6 100%)}
 .th3__quote{font-size:clamp(1.5rem,2.3vw,2.2rem)}
+
+
+/* ===== Sticky: top strip + menu bar stay together on scroll; menu spreads full width ===== */
+body.hx-topfix .hx-top{position:fixed;top:0;left:0;right:0;z-index:92;box-shadow:0 6px 18px -10px rgba(0,0,0,.6)}
+body.hx-topfix .hx{padding-top:var(--hxtop,58px)}
+body.hx-fixed .hx2 .hx-nav{top:var(--hxtop,0px);z-index:91;border-radius:0;padding:6px 100px;box-shadow:0 14px 30px -18px rgba(0,0,0,.55);border-bottom:1px solid #e6dccb}
+html{scroll-padding-top:150px}
+.hx2 .hx-nav__list{flex:1;justify-content:space-between!important;gap:0}
+.hx2 .hx-nav__cta{margin-left:18px}
+@media (max-width:1280px){body.hx-fixed .hx2 .hx-nav{padding:6px 32px}}
+@media (max-width:1180px){.hx2 .hx-nav__list{flex:none}}
+@media (max-width:760px){body.hx-fixed .hx2 .hx-nav{padding:6px 16px}.hx2 .hx-nav__cta{display:inline-flex;margin-left:auto;height:42px;padding:0 14px}}

@@ -19,10 +19,18 @@
   /* New banner header: the white nav bar sticks to the top after the banner scrolls past */
   var hxWrap = $('.hx-navwrap'), hxNav = $('.hx-nav');
   if (hxWrap && hxNav) {
+    var hxTop = $('.hx-top'), hxHdr = $('#hdr');
+    var deskMQ = window.matchMedia ? window.matchMedia('(min-width: 761px)') : { matches: true };
     var hxFix = function () {
       hxWrap.style.minHeight = hxNav.offsetHeight + 'px';
+      /* top strip: pinned to the top from the first pixel of scroll (desktop/tablet) */
+      var pinTop = !!(hxTop && deskMQ.matches);
+      var th = pinTop ? hxTop.offsetHeight : 0;
+      document.documentElement.style.setProperty('--hxtop', th + 'px');
+      document.body.classList.toggle('hx-topfix', pinTop && window.scrollY > 0);
+      /* menu bar: sticks right under the strip once it reaches it — no gap */
       var top = hxWrap.getBoundingClientRect().top;
-      document.body.classList.toggle('hx-fixed', top < 0);
+      document.body.classList.toggle('hx-fixed', top < th);
     };
     window.addEventListener('scroll', hxFix, { passive: true }); window.addEventListener('resize', hxFix); hxFix();
   }
