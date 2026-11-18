@@ -2046,3 +2046,8 @@ html,body{overflow-anchor:none}
   .hq{min-height:calc(100vh - var(--hdrh,186px) + 2.78vw);min-height:calc(100svh - var(--hdrh,186px) + 2.78vw)}
 }
 @media (min-width:1081px){.hq__grid .hq__in{position:relative;top:-36px}}
+/* waves visible on the first screen again */
+@media (min-width:1081px){
+  .hq{min-height:calc(100vh - var(--hdrh,186px));min-height:calc(100svh - var(--hdrh,186px))}
+}
+@media (min-width:1081px){.hq__grid .hq__in{top:-14px}}
