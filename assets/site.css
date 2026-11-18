@@ -2809,3 +2809,16 @@ html{scroll-padding-top:150px}
 .abs-sup__box .h2{margin:6px 0 0;font-size:1.7rem}
 .abs-sup__box p{margin:6px 0 0;color:#5a4526}
 .abs-sup__box .btns{display:flex;flex-wrap:wrap;gap:10px}
+
+/* internal pages: no banner hero — just the two strips (top bar + menu bar) */
+.hx--inner .hx-band{padding:0!important;background:#faf8f3!important;border-bottom:1px solid #e6dccb;overflow:visible}
+.hx--inner .hx-band::before{display:none}
+.hx--inner .hx-navwrap{margin:0!important}
+.hx--inner .hx-nav{width:auto!important;max-width:none;margin:0!important;padding:8px 0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;justify-content:space-between!important}
+.hx--inner .hx-nav__list{flex:none}
+body.hx-fixed .hx--inner .hx-nav{background:#faf8f3!important;padding:6px 100px!important;box-shadow:0 14px 30px -18px rgba(0,0,0,.35)!important}
+@media (max-width:1280px){body.hx-fixed .hx--inner .hx-nav{padding:6px 32px!important}}
+@media (max-width:760px){body.hx-fixed .hx--inner .hx-nav{padding:6px 16px!important}}
+.hx--inner .hx-navwrap{margin-top:0!important;margin-bottom:0!important;margin-inline:100px!important}
+@media (max-width:1280px){.hx--inner .hx-navwrap{margin-inline:32px!important}}
+@media (max-width:760px){.hx--inner .hx-navwrap{margin-inline:16px!important}}
