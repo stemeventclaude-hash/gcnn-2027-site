@@ -2533,3 +2533,34 @@ body.hx-fixed .hx2 .hx-nav{border-radius:0}
 .th2__pillars small{display:block;margin-top:2px;font-size:.86rem;color:rgba(244,239,230,.7)}
 @media (max-width:900px){.th2__in{grid-template-columns:1fr;gap:20px}.th2__mark{width:72px;height:72px}.th2__mark span{font-size:3.8rem;transform:translateY(12px)}.th2__pillars{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.th2__quote em{animation:none}}
+
+
+/* ===== Conference theme v3 — ivory card straddling the navy banner edge ===== */
+.th3{position:relative;padding:0 0 64px;background:linear-gradient(180deg,#151b24 0,#1c2430 70px,#faf8f3 70px,#f4efe6 100%)}
+.th3__card{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:44px;
+  padding:40px 46px;border-radius:26px;background:linear-gradient(180deg,#fff 0%,#fbf8f2 100%);
+  border:1px solid #e6dccb;box-shadow:0 40px 70px -40px rgba(28,36,48,.45),0 0 0 8px rgba(255,255,255,.6)}
+.th3__card::before{content:"";position:absolute;left:46px;right:46px;top:0;height:3px;border-radius:0 0 3px 3px;background:linear-gradient(90deg,#8a6a3b,#e6cfa6 50%,#8a6a3b)}
+.th3__lead{display:flex;flex-direction:column;gap:10px;padding-right:40px;border-right:1px solid #e6dccb}
+.th3__eye{display:inline-flex;align-items:center;gap:10px;font:700 .74rem var(--mono);letter-spacing:.24em;text-transform:uppercase;color:#8a6a3b;white-space:nowrap}
+.th3__eye::before{content:"";width:26px;height:2px;background:#8a6a3b}
+.th3__yr{font-size:2rem;font-weight:800;letter-spacing:-.03em;color:#1c2430;white-space:nowrap}
+.th3__yr b{background:linear-gradient(100deg,#8a6a3b,#c8ad84 50%,#8a6a3b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.th3__quote{position:relative;margin:0;font-size:clamp(1.6rem,2.6vw,2.5rem);font-weight:700;line-height:1.22;letter-spacing:-.025em;color:#1c2430}
+.th3__quote em{font-style:normal;color:#8a6a3b}
+.th3__q{position:absolute;left:-.55em;top:-.35em;font:800 3.4em/1 Georgia,serif;color:rgba(200,173,132,.35);pointer-events:none}
+.th3__art{width:150px;height:150px;flex:none}
+.th3__ring{fill:none;stroke:#c8ad84;stroke-width:1.5}
+.th3__ring--d{stroke-dasharray:3 6;opacity:.7;transform-origin:100px 100px;animation:hqc-turn 60s linear infinite}
+.th3__lobe{fill:rgba(200,173,132,.14);stroke:#8a6a3b;stroke-width:2}
+.th3__net path{fill:none;stroke:#8a6a3b;stroke-width:1.6;stroke-linecap:round;stroke-dasharray:4 5;animation:th3-flow 3s linear infinite}
+@keyframes th3-flow{to{stroke-dashoffset:-18}}
+@keyframes hqc-turn{to{transform:rotate(360deg)}}
+.th3__dot circle{fill:#1c2430;stroke:#faf8f3;stroke-width:1.5}
+.th3__dot circle:nth-child(4){fill:#8a6a3b;animation:th3-pulse 2.4s ease-in-out infinite;transform-origin:100px 90px}
+@keyframes th3-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+@media (max-width:1100px){.th3__card{grid-template-columns:minmax(0,1fr) auto;gap:28px}.th3__lead{grid-column:1/-1;flex-direction:row;align-items:center;gap:18px;padding:0 0 16px;border-right:0;border-bottom:1px solid #e6dccb}.th3__yr{font-size:1.5rem}}
+@media (max-width:640px){.th3__card{grid-template-columns:1fr;padding:28px 22px}.th3__art{display:none}.th3__q{display:none}.th3__lead{flex-direction:column;align-items:flex-start;gap:6px}}
+@media (prefers-reduced-motion:reduce){.th3__ring--d,.th3__net path,.th3__dot circle{animation:none}}
+.th3{padding-top:30px;background:linear-gradient(180deg,#1c2430 0,#1c2430 110px,#faf8f3 110px,#f4efe6 100%)}
+.th3__quote{font-size:clamp(1.5rem,2.3vw,2.2rem)}
