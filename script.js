@@ -97,6 +97,19 @@
     setTimeout(function () { upd(); setInterval(upd, 1000); }, 700);
   });
 
+  /* Hero delegate pass: 3D tilt following the pointer */
+  $$('.hqb__card').forEach(function (c) {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    c.addEventListener('pointermove', function (ev) {
+      var r = c.getBoundingClientRect();
+      var x = (ev.clientX - r.left) / r.width - .5, y = (ev.clientY - r.top) / r.height - .5;
+      c.style.setProperty('--ry', (x * 14).toFixed(2) + 'deg');
+      c.style.setProperty('--rx', (-y * 12).toFixed(2) + 'deg');
+      c.style.setProperty('--mx', ((x + .5) * 100).toFixed(1) + '%');
+    });
+    c.addEventListener('pointerleave', function () { c.style.setProperty('--rx', '0deg'); c.style.setProperty('--ry', '0deg'); });
+  });
+
   /* dl2-marquee: deadline pills travel one behind the other */
   $$('.dl2-wrap').forEach(function (w) {
     var pills = $$('.dl2', w);
