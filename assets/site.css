@@ -2251,3 +2251,6 @@ html,body{overflow-anchor:none}
 
 /* top strip content pinned to the far right corner */
 .hd2__top .hd2__util.tb2{width:100%!important;max-width:none!important;margin:0!important;padding:0 20px 0 0!important}
+.tb2__links{order:2}
+.tb2__rot{order:1;padding-left:0;border-left:0;padding-right:26px;border-right:1px solid #ddd2bf}
+@media (max-width:1120px){.tb2__rot{padding-right:0;border-right:0}}
