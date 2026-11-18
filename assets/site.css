@@ -2576,3 +2576,11 @@ html{scroll-padding-top:150px}
 @media (max-width:1280px){body.hx-fixed .hx2 .hx-nav{padding:6px 32px}}
 @media (max-width:1180px){.hx2 .hx-nav__list{flex:none}}
 @media (max-width:760px){body.hx-fixed .hx2 .hx-nav{padding:6px 16px}.hx2 .hx-nav__cta{display:inline-flex;margin-left:auto;height:42px;padding:0 14px}}
+
+/* theme card: shorter */
+.th3{padding-bottom:40px}
+.th3__card{padding:24px 40px;gap:36px}
+.th3__art{width:110px;height:110px}
+.th3__yr{font-size:1.7rem}
+.th3__lead{gap:6px}
+.th3__quote{font-size:clamp(1.4rem,2vw,1.95rem)}
