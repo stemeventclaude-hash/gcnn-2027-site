@@ -1786,3 +1786,16 @@ html{scroll-padding-top:200px}
 @keyframes vtin{from{opacity:0;transform:translateY(8px)}}
 .hd2{view-transition-name:site-header}
 @media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
+
+/* "What you'll take away": warm light background instead of dark navy */
+#why.sec--ink{position:relative;overflow:hidden;background:radial-gradient(55% 70% at 100% 0%,rgba(200,173,132,.28) 0%,rgba(200,173,132,0) 70%),radial-gradient(45% 60% at 0% 100%,rgba(255,255,255,.9) 0%,rgba(255,255,255,0) 70%),linear-gradient(180deg,#f3ede2 0%,#ece3d3 100%);color:var(--ink-2)}
+#why.sec--ink .eyebrow{color:#8a6a3b!important}
+#why.sec--ink .h2{color:#1c2430}
+#why.sec--ink .h2 em{color:#8a6a3b}
+#why.sec--ink .head>p{color:#5b5446!important}
+#why .take li{border-top-color:rgba(138,106,59,.22)}
+#why .take__n{color:#8a6a3b}
+#why .take h3{color:#1c2430}
+#why .take p{color:#5b5446}
+#why .take li{padding-left:6px;transition:background-color .3s,padding .3s;border-radius:4px}
+#why .take li:hover{background:rgba(255,255,255,.55);padding-left:14px}
