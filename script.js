@@ -35,6 +35,15 @@
     window.addEventListener('scroll', hxFix, { passive: true }); window.addEventListener('resize', hxFix); hxFix();
   }
 
+  /* Featured speakers: click a card to flip it and see the details */
+  $$('.fs-flip').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var on = b.getAttribute('aria-pressed') !== 'true';
+      b.setAttribute('aria-pressed', String(on));
+      b.closest('.fs-card').classList.toggle('is-flipped', on);
+    });
+  });
+
   /* Mobile menu */
   var burger = $('#burger');
   var setMenu = function (open) {
