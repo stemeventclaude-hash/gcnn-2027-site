@@ -2028,3 +2028,9 @@ html,body{overflow-anchor:none}
 /* river: clearer, flowing waves */
 .hq__river{stroke-width:1.5;opacity:.6;stroke-dasharray:14 10;animation:river 4s linear infinite}
 @media (min-width:1081px){.hq__sky{margin-top:6px!important}.hq__grid .hq__meta{margin-bottom:0}}
+/* hero fills the first screen: content in the middle, skyline + waves on the bottom edge */
+@media (min-width:1081px){
+  .hq{display:flex;flex-direction:column;min-height:calc(100vh - var(--hdrh,186px));min-height:calc(100svh - var(--hdrh,186px))}
+  .hq__grid{flex:1;align-content:center}
+  .hq__sky{flex:none}
+}

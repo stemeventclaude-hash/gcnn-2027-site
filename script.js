@@ -12,6 +12,9 @@
     else if (stuck && y < 8) hdr.classList.remove('is-stuck');
   };
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  /* expose the full (un-shrunk) header height so the hero can fill the rest of the screen */
+  var setHdrH = function () { if (!hdr.classList.contains('is-stuck')) document.documentElement.style.setProperty('--hdrh', hdr.offsetHeight + 'px'); };
+  setHdrH(); window.addEventListener('resize', setHdrH);
 
   /* Mobile menu */
   var burger = $('#burger');
