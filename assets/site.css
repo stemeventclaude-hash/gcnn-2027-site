@@ -2685,3 +2685,11 @@ html{scroll-padding-top:150px}
 .ps-card__cty{margin-top:6px;padding:4px 12px;background:linear-gradient(135deg,#a8824c,#8a6a3b);font-size:.8rem;font-weight:700;box-shadow:0 6px 14px -8px rgba(138,106,59,.8)}
 .ps-card__cty svg{stroke:#fff}
 .ps-grid{row-gap:30px}
+
+/* speakers: one alignment — photos and names start on the same top line in every row */
+.ps-grid{grid-auto-rows:auto;align-items:start}
+.ps-card{align-items:flex-start;height:auto}
+.ps-card__photo{width:92px;height:92px}
+.ps-card__text{padding-top:2px;align-self:stretch}
+.ps-card__name{min-height:2.6em}
+.ps-card__aff{min-height:4.35em}
