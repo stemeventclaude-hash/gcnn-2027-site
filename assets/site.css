@@ -2584,3 +2584,6 @@ html{scroll-padding-top:150px}
 .th3__yr{font-size:1.7rem}
 .th3__lead{gap:6px}
 .th3__quote{font-size:clamp(1.4rem,2vw,1.95rem)}
+
+/* menu bar: tighter gaps between items */
+@media (min-width:1181px){.hx2 .hx-nav__list{justify-content:center!important;gap:6px}.hx2 .hx-nav .nav__btn{padding:0 16px}}
