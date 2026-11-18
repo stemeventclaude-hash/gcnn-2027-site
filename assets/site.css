@@ -2511,3 +2511,25 @@ body.hx-fixed .hx2 .hx-nav{border-radius:0}
   .hx2 .hx-title{font-size:clamp(2.2rem,3.2vw,3.5rem)!important}
 }
 @media (min-width:1181px) and (max-width:1400px){.hx2 .hx-band__row{grid-template-columns:auto minmax(0,1fr) 330px!important}}
+
+
+/* ===== Conference theme — matches the navy banner ===== */
+.th2{position:relative;overflow:hidden;padding:64px 0 70px;color:#fff;
+  background:radial-gradient(45% 90% at 90% 0%,rgba(200,173,132,.14) 0,transparent 65%),
+    radial-gradient(35% 80% at 0% 100%,rgba(138,106,59,.16) 0,transparent 70%),
+    linear-gradient(180deg,#1c2430 0%,#18202b 100%);border-top:1px solid rgba(200,173,132,.22)}
+.th2::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,transparent,#8a6a3b 20%,#e6cfa6 50%,#8a6a3b 80%,transparent)}
+.th2__in{display:grid;grid-template-columns:auto minmax(0,1fr);gap:40px;align-items:start}
+.th2__mark{display:grid;place-items:center;width:96px;height:96px;border-radius:24px;background:linear-gradient(160deg,#c8ad84,#8a6a3b);box-shadow:0 24px 44px -20px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.3)}
+.th2__mark span{font:800 5rem/1 Georgia,serif;color:#1c2430;transform:translateY(16px)}
+.th2__pill{display:inline-block;padding:5px 16px;border-radius:999px;border:1px solid rgba(230,207,166,.55);background:rgba(255,255,255,.05);font:600 .8rem var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#e6cfa6}
+.th2__quote{margin:18px 0 0;max-width:1000px;font-size:clamp(1.8rem,3.2vw,3rem);font-weight:700;line-height:1.18;letter-spacing:-.025em;color:#fff}
+.th2__quote em{font-style:normal;background:linear-gradient(100deg,#c8ad84 0%,#f3e2c2 45%,#b8955f 70%,#8a6a3b 100%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:hqshine 7s ease-in-out 1s infinite}
+.th2__pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:34px 0 0;padding:0;list-style:none}
+.th2__pillars li{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(200,173,132,.25);transition:background .25s,border-color .25s,transform .25s}
+.th2__pillars li:hover{background:rgba(200,173,132,.1);border-color:rgba(200,173,132,.55);transform:translateY(-3px)}
+.th2__pillars svg{flex:none;width:44px;height:44px;padding:10px;border-radius:12px;background:#faf8f3;fill:none;stroke:#8a6a3b;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.th2__pillars b{display:block;font-size:1.05rem;color:#fff}
+.th2__pillars small{display:block;margin-top:2px;font-size:.86rem;color:rgba(244,239,230,.7)}
+@media (max-width:900px){.th2__in{grid-template-columns:1fr;gap:20px}.th2__mark{width:72px;height:72px}.th2__mark span{font-size:3.8rem;transform:translateY(12px)}.th2__pillars{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.th2__quote em{animation:none}}
