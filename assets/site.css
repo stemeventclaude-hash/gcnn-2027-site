@@ -1623,3 +1623,15 @@ html{scroll-padding-top:200px}
 .hq__grid .hq__theme{text-wrap:balance;max-width:560px}
 .hq__grid .hq__meta li:last-child{flex-basis:100%;justify-content:center;margin-top:6px}
 .hq__grid .hq__meta li:last-child::before{display:none}
+/* hero: left-aligned, title on one line so the skyline sits higher */
+.hq__grid{grid-template-columns:1fr;min-height:0}
+.hq__grid .hq__in{align-items:flex-start;text-align:left}
+.hq__grid .hq__eyebrow span:first-child{display:none}
+.hq__grid .hq__title{margin:14px 0 0;max-width:none;font-size:clamp(2.4rem,4.6vw,4.7rem);white-space:nowrap}
+.hq__grid .hq__theme{margin:14px 0 0;max-width:none;text-wrap:wrap}
+.hq__grid .hq__meta{justify-content:flex-start;margin-bottom:0}
+.hq__grid .hq__meta li:last-child{flex-basis:auto;margin-top:0}
+.hq__grid .hq__meta li:last-child::before{display:block}
+.hq{padding-top:44px}
+@media (max-width:900px){.hq__grid .hq__title{white-space:normal}}
+.hq__grid .hq__meta{margin-bottom:18px}
