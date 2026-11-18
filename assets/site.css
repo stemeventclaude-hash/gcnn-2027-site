@@ -1649,3 +1649,10 @@ html{scroll-padding-top:200px}
 .hq__grid .hq__title .hq__w:first-of-type::after{content:none}
 .hq__grid .hq__title{white-space:nowrap;width:max-content;max-width:none}
 @media (max-width:900px){.hq__grid .hq__title{white-space:normal;width:auto}}
+
+/* theme and meta each on a single line */
+.hq__grid .hq__theme{max-width:none;white-space:nowrap;text-wrap:nowrap}
+.hq__grid .hq__meta{flex-wrap:nowrap;white-space:nowrap}
+.hq__grid .hq__meta li:last-child{flex-basis:auto;margin-top:0}
+.hq__grid .hq__meta li:last-child::before{display:block}
+@media (max-width:900px){.hq__grid .hq__theme{white-space:normal}.hq__grid .hq__meta{flex-wrap:wrap}}
