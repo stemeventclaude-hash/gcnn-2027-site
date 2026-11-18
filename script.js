@@ -16,6 +16,17 @@
   var setHdrH = function () { if (!hdr.classList.contains('is-stuck')) document.documentElement.style.setProperty('--hdrh', hdr.offsetHeight + 'px'); };
   setHdrH(); window.addEventListener('resize', setHdrH);
 
+  /* New banner header: the white nav bar sticks to the top after the banner scrolls past */
+  var hxWrap = $('.hx-navwrap'), hxNav = $('.hx-nav');
+  if (hxWrap && hxNav) {
+    var hxFix = function () {
+      hxWrap.style.minHeight = hxNav.offsetHeight + 'px';
+      var top = hxWrap.getBoundingClientRect().top;
+      document.body.classList.toggle('hx-fixed', top < 0);
+    };
+    window.addEventListener('scroll', hxFix, { passive: true }); window.addEventListener('resize', hxFix); hxFix();
+  }
+
   /* Mobile menu */
   var burger = $('#burger');
   var setMenu = function (open) {
