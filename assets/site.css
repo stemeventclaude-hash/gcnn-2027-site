@@ -1578,3 +1578,8 @@ body{background:#faf8f3}
 html{scroll-padding-top:200px}
 @media (max-width:1120px){.hd2--rows .hd2__mid,.hd2--rows.is-stuck .hd2__mid{height:66px}.hd2--rows .hd2__logo img,.hd2--rows.is-stuck .hd2__logo img{width:150px;height:34px}html{scroll-padding-top:130px}}
 @media (min-width:1121px){.tnav{top:172px}.tx__panels,.sd__side,.side,.sum,.toc,.faq__side{top:180px}}
+
+/* hero: buttons & countdown removed, skyline raised */
+.hq__sky{margin-top:0!important}
+.hq__meta{margin-bottom:-24px}
+.hq__meta{margin-bottom:14px}
