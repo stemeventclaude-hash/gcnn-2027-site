@@ -1996,3 +1996,23 @@ html,body{overflow-anchor:none}
 /* card beside the left text (meta line stays on the left) */
 .hq__grid .hq__meta{margin-bottom:6px}
 .hqt{margin:6px 0 22px}
+/* compact ticket card: no taller than the left text, so the skyline stays up */
+.hq__grid{grid-template-columns:minmax(0,1fr) 340px!important}
+.hqt{margin:0;padding:20px 22px 18px;border-radius:22px}
+.hqt::before{height:5px;border-radius:22px 22px 0 0}
+.hqt__top{padding-bottom:12px}
+.hqt__lbl{font-size:.62rem}
+.hqt__month{margin-top:6px;font-size:.85rem}
+.hqt__days{font-size:3.2rem}
+.hqt__yr{margin-top:4px;font-size:.72rem}
+.hqt__rows{margin-top:12px;gap:10px}
+.hqt__rows svg{width:28px;height:28px;padding:6px}
+.hqt__rows b{font-size:.9rem}
+.hqt__rows span{font-size:.72rem}
+.hqt__cd{margin-top:12px;padding:10px 12px 13px;border-radius:13px}
+.hqt__cd p{margin-bottom:4px;font-size:.58rem}
+.hqt__cells b{font-size:1.15rem}
+.hqt__cells small{font-size:.54rem}
+.hqt__cd .dl2__bar{left:12px;right:12px;bottom:5px}
+.hqt__notch{width:20px;height:20px;top:calc(50% - 8px)}
+.hqt__notch--l{left:-11px}.hqt__notch--r{right:-11px}
