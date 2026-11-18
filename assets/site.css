@@ -2248,3 +2248,6 @@ html,body{overflow-anchor:none}
 .hd2--rows.is-stuck .hd2__util.tb2{height:42px}
 @media (max-width:1120px){.tb2__links{display:none}.tb2__rot{border-left:0;padding-left:0}.hd2__util.tb2{justify-content:center!important}}
 @media (prefers-reduced-motion:reduce){.tb2__rot .dl2{transition:opacity .3s!important}}
+
+/* top strip content pinned to the far right corner */
+.hd2__top .hd2__util.tb2{width:100%!important;max-width:none!important;margin:0!important;padding:0 20px 0 0!important}
