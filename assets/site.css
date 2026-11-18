@@ -2264,3 +2264,9 @@ html,body{overflow-anchor:none}
   .tb2__rot{order:1;justify-items:start;padding-right:0;border-right:0}
   .tb2__links{order:2;margin-left:auto}
 }
+
+/* swap: Contact/Terms on the left (logo line), deadline pill in the right corner */
+@media (min-width:1121px){
+  .tb2__links{order:1;margin-left:0}
+  .tb2__rot{order:2;justify-items:end}
+}
