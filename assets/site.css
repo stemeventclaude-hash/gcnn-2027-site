@@ -1583,3 +1583,6 @@ html{scroll-padding-top:200px}
 .hq__sky{margin-top:0!important}
 .hq__meta{margin-bottom:-24px}
 .hq__meta{margin-bottom:14px}
+
+/* 100px side margin on every section (desktop) */
+@media (min-width:1280px){.wrap{width:calc(100% - 200px);max-width:none;margin-inline:100px}}
