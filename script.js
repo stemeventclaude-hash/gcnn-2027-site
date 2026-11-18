@@ -516,18 +516,22 @@
       var inP = mode === 'in';
       $$('[data-inperson]', reg).forEach(function (x) { x.hidden = !inP; });
       var room = $('[name=room]:checked', reg), ppl = +reg.people.value, gst = inP ? +reg.guests.value : 0;
-      var nights = Math.max(0, reg.checkout.value - reg.checkin.value), hasRoom = inP && room.value !== 'none';
-      $('[data-dates]', reg).hidden = !hasRoom;
+      var hasRoom = inP && !!room;
       var price = +cat.getAttribute('data-price');
-      var total = price * ppl + (hasRoom ? room.getAttribute('data-price') * nights : 0) + gst * 150;
-      $('[data-o=mode]', reg).textContent = inP ? 'In-Person' : 'Virtual';
-      $('[data-o=type]', reg).textContent = cat.getAttribute('data-label');
-      $('[data-o=reg]', reg).textContent = money(price) + ' × ' + ppl;
-      $('[data-o=room]', reg).textContent = hasRoom ? room.getAttribute('data-label') + ', ' + nights + ' night' + (nights === 1 ? '' : 's') : 'None';
-      $('[data-o=guests]', reg).textContent = gst ? gst + ' × $150' : '0';
-      $('[data-o=total]', reg).textContent = money(total);
-      $('[data-paybtn]', reg).textContent = 'Proceed to pay ' + money(total);
+      var total = price * ppl + (hasRoom ? +room.getAttribute('data-price') : 0) + gst * 150;
+      var put = function (k, v, show) { var el = $('[data-o=' + k + ']', reg); if (!el) return; if (v !== null) el.textContent = v; if (show !== undefined) el.hidden = !show; };
+      put('mode', inP ? 'In-Person' : 'Virtual');
+      put('type', cat.getAttribute('data-label'));
+      put('reglabel', 'Registration \u00d7 ' + ppl); put('reg', money(price * ppl));
+      put('each', money(price) + ' each');
+      put('roomlabel', null, hasRoom); put('room', hasRoom ? room.getAttribute('data-label') + ' \u00b7 ' + money(+room.getAttribute('data-price')) + '/night' : '', hasRoom);
+      put('gstlabel', null, gst > 0); put('guests', gst ? gst + ' \u00d7 $150' : '', gst > 0);
+      put('total', money(total));
+      $('[data-paybtn]', reg).textContent = 'Proceed to Pay ' + money(total);
     };
+    /* the two occupancy options are optional but mutually exclusive */
+    $$('[name=room]', reg).forEach(function (r) { r.addEventListener('change', function () { if (r.checked) $$('[name=room]', reg).forEach(function (o) { if (o !== r) o.checked = false; }); }); });
+    reg.addEventListener('reset', function () { setTimeout(calc, 0); });
     reg.addEventListener('change', calc); calc();
   }
 

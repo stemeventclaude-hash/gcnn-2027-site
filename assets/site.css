@@ -2791,3 +2791,21 @@ html{scroll-padding-top:150px}
 .gm-row:last-child{padding:4px 12px;border-radius:10px;background:#f6eddc;color:#5a4526;font-weight:700}
 @media (max-width:900px){.ged__m--x{align-items:flex-start;text-align:left;min-width:0}}
 .ged__m--x,.ged__m--x *{font-family:var(--sans)!important;letter-spacing:normal!important;text-transform:none!important}
+
+
+/* register + abstract: match live form details */
+.opt__cur{margin-left:5px;font-style:normal;font-size:.7rem;font-weight:700;letter-spacing:.08em;color:#8a6a3b}
+.rs__opt{font-size:.85rem;font-weight:500;color:#8a6a3b}
+.field__hint{margin-left:6px;font-weight:500;color:#8a6a3b}
+.sum__sub{margin:2px 0 0;color:rgba(244,239,230,.75)}
+.sum__ev{margin:8px 0 14px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.06);font-size:.86rem;color:#e6cfa6}
+.sum__t strong em{font-style:normal;font-size:.7em;color:#c8ad84}
+.sum__h{margin:18px 0 4px;font-size:1rem;color:#fff}
+.sum__note{margin:0 0 8px;font-size:.86rem;color:rgba(244,239,230,.75)}
+.sum__btns{display:flex;gap:10px;margin-top:12px}
+.sum__btns .btn--white{flex:1}
+.abs-sup{padding:0 0 70px}
+.abs-sup__box{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;padding:28px 32px;border-radius:20px;background:#f6eddc;border:1px solid #e6d6b8}
+.abs-sup__box .h2{margin:6px 0 0;font-size:1.7rem}
+.abs-sup__box p{margin:6px 0 0;color:#5a4526}
+.abs-sup__box .btns{display:flex;flex-wrap:wrap;gap:10px}
