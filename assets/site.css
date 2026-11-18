@@ -2034,3 +2034,8 @@ html,body{overflow-anchor:none}
   .hq__grid{flex:1;align-content:center}
   .hq__sky{flex:none}
 }
+/* no river waves; skyline ground line sits exactly on the hero's bottom edge */
+.hq__river{display:none}
+.hq{padding-bottom:0}
+.hq__sky{display:block;margin-bottom:0!important}
+.hq__ground{stroke-width:1.6;opacity:.85}
