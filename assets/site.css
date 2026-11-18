@@ -1799,3 +1799,26 @@ html{scroll-padding-top:200px}
 #why .take p{color:#5b5446}
 #why .take li{padding-left:6px;transition:background-color .3s,padding .3s;border-radius:4px}
 #why .take li:hover{background:rgba(255,255,255,.55);padding-left:14px}
+
+/* ===== Speakers: live-site "Our featured speakers" cards (site palette) ===== */
+.ns-sec{background:#f4f0e8;padding:42px 0 clamp(72px,8vw,118px)}
+.ns-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:clamp(30px,4vw,48px)}
+.ns-eye{margin:0 0 14px;font:650 11px/1.5 var(--sans);letter-spacing:.19em;text-transform:uppercase;color:#8a6a3b!important}
+.ns-head h2{max-width:520px;margin-top:8px;font-size:clamp(36px,4.4vw,58px);font-weight:700;line-height:.98;letter-spacing:-.045em;color:#1c2430}
+.ns-link{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:700;font-size:.95rem;color:#8a6a3b;text-decoration:none}
+.ns-link svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.ns-link:hover svg{transform:translateX(4px)}
+.ns-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.ns-card{min-height:100%;padding:0;overflow:hidden;border:1px solid #e4dccd;border-radius:3px;background:#fff;box-shadow:0 16px 36px rgba(28,36,48,.07);transition:transform .25s ease,box-shadow .25s ease}
+.ns-card:hover{transform:translateY(-7px);box-shadow:0 24px 50px rgba(28,36,48,.14)}
+.ns-prof{display:block}
+.ns-prof img,.ns-ini{display:block;width:100%;height:280px;object-fit:cover;object-position:center 18%;border-radius:0}
+.ns-ini{display:grid;place-items:center;background:radial-gradient(circle at 72% 18%,rgba(200,173,132,.6),transparent 30%),linear-gradient(145deg,#1c2430,#3b4452 52%,#8a6a3b);color:#fff;font-size:clamp(58px,7vw,92px);font-weight:650;letter-spacing:-.08em}
+.ns-body{padding:22px 24px 24px}
+.ns-role{display:inline-flex;align-items:center;min-height:23px;margin-bottom:15px;padding:0 9px;border:1px solid #e2d6c2;border-radius:999px;color:#8a6a3b;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.ns-body h3{margin:0 0 12px;color:#1c2430;font-size:22px;line-height:1.06;letter-spacing:-.035em}
+.ns-body p{margin:0 0 14px;max-width:34ch;color:#5f5a52;font-size:14px;line-height:1.5}
+.ns-cty{display:flex;align-items:center;gap:9px;color:#2b2a26;font-size:13px;font-weight:650}
+.ns-cty::before{content:"";width:7px;height:7px;border-radius:50%;background:#8a6a3b;box-shadow:0 0 0 4px #f1e9db}
+@media (max-width:1080px){.ns-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.ns-grid{grid-template-columns:1fr}.ns-prof img,.ns-ini{height:245px}}
