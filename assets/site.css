@@ -1564,3 +1564,17 @@ body{background:#faf8f3}
 .ab9__sub img{object-position:92% 25%}
 .ab9__in{align-items:start}
 .ab9__media{margin-top:40px}
+
+/* whole header stays visible while scrolling; slimmer logo/button row */
+.hd2--rows,.hd2--rows.is-stuck{top:0!important}
+.hd2--rows .hd2__mid{height:78px;transition:height .25s}
+.hd2--rows .hd2__logo img{width:210px;height:48px;transition:width .25s,height .25s}
+.hd2--rows .hd2__mid .hb2{height:40px}
+.hd2--rows.is-stuck .hd2__mid{height:62px}
+.hd2--rows.is-stuck .hd2__logo img{width:170px;height:39px}
+.hd2--rows.is-stuck .hd2__mid .hb2{height:36px}
+.hd2--rows .dl2-wrap{transition:height .25s}
+.hd2--rows.is-stuck .dl2-wrap{height:42px!important}
+html{scroll-padding-top:200px}
+@media (max-width:1120px){.hd2--rows .hd2__mid,.hd2--rows.is-stuck .hd2__mid{height:66px}.hd2--rows .hd2__logo img,.hd2--rows.is-stuck .hd2__logo img{width:150px;height:34px}html{scroll-padding-top:130px}}
+@media (min-width:1121px){.tnav{top:172px}.tx__panels,.sd__side,.side,.sum,.toc,.faq__side{top:180px}}
