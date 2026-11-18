@@ -2226,3 +2226,8 @@ html,body{overflow-anchor:none}
 @keyframes hqb-dot{0%,25%{width:16px;background:#fff}26%,100%{width:6px;background:rgba(255,255,255,.55)}}
 @media (prefers-reduced-motion:reduce){.hqb__main .hqb__s{animation:none}.hqb__main .hqb__s:first-child{opacity:1}.hqb__dots{display:none}}
 .hqb__main{background:#1c2430}
+
+
+/* header menu: 7 items now (added Sponsor & Exhibit, Presenter Guidelines) */
+@media (min-width:1121px){.nv2__list{gap:34px!important}.nv2__list .nav__btn{white-space:nowrap}}
+@media (min-width:1121px) and (max-width:1360px){.nv2__list{gap:22px!important}.nv2__list .nav__btn{font-size:.92rem}}
