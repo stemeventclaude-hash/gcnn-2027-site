@@ -2883,3 +2883,7 @@ body.hx-fixed .hx--inner .hx-nav{background:#faf8f3!important;padding:6px 100px!
 .ph__grid{align-items:start}
 .ph__grid>div:first-child{padding-top:0!important}
 .ph__grid:has(.ph__keys)>div:first-child{padding-top:24px!important}
+
+.ph__dl--hero{margin:22px 0 0;max-width:460px}
+.ph__dl--hero{max-width:560px}
+.ph__dl--hero .dl b{white-space:nowrap}
