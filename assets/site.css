@@ -2016,3 +2016,15 @@ html,body{overflow-anchor:none}
 .hqt__cd .dl2__bar{left:12px;right:12px;bottom:5px}
 .hqt__notch{width:20px;height:20px;top:calc(50% - 8px)}
 .hqt__notch--l{left:-11px}.hqt__notch--r{right:-11px}
+/* lift hero so skyline + river waves fit in the first screen */
+@media (min-width:1081px){
+  .hq{padding-top:20px}
+  .hq__grid .hq__title{margin-top:10px;font-size:clamp(2.8rem,5.2vw,5.4rem)}
+  .hq__grid .hq__theme{margin-top:12px}
+  .hq__grid .hq__meta{margin-top:14px;margin-bottom:0}
+  .hqt{margin-top:-6px}
+  .hq__sky{height:170px;margin-top:-18px!important}
+}
+/* river: clearer, flowing waves */
+.hq__river{stroke-width:1.5;opacity:.6;stroke-dasharray:14 10;animation:river 4s linear infinite}
+@media (min-width:1081px){.hq__sky{margin-top:6px!important}.hq__grid .hq__meta{margin-bottom:0}}
