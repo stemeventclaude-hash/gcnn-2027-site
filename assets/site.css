@@ -1656,3 +1656,10 @@ html{scroll-padding-top:200px}
 .hq__grid .hq__meta li:last-child{flex-basis:auto;margin-top:0}
 .hq__grid .hq__meta li:last-child::before{display:block}
 @media (max-width:900px){.hq__grid .hq__theme{white-space:normal}.hq__grid .hq__meta{flex-wrap:wrap}}
+
+/* hero content moved up, skyline follows */
+.hq{padding-top:28px}
+.hq__grid{min-height:0}
+.hq__grid .hq__meta{margin-bottom:6px}
+.hq__sky{margin-top:-10px!important}
+.hq{padding-top:46px}
