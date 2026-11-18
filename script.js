@@ -86,14 +86,36 @@
     var half = document.createElement('div'); half.className = 'dl2-half';
     pills.forEach(function (p) { half.appendChild(p); });
     var sep = w.querySelector('.dl2__sep'); if (sep) sep.hidden = true;
+    w.appendChild(track); track.appendChild(half);
+    /* repeat the pills until one half is wider than the strip, so the loop never shows a gap */
+    var guard = 0;
+    while (half.scrollWidth < w.clientWidth + 40 && guard++ < 8) {
+      pills.forEach(function (p) {
+        var c = p.cloneNode(true); c.setAttribute('aria-hidden', 'true');
+        $$('a', c).forEach(function (x) { x.tabIndex = -1; });
+        half.appendChild(c);
+      });
+    }
     var copy = half.cloneNode(true); copy.setAttribute('aria-hidden', 'true');
     $$('a', copy).forEach(function (x) { x.tabIndex = -1; });
-    track.appendChild(half); track.appendChild(copy); w.appendChild(track);
-    var src = $$('[data-u]', half), dst = $$('[data-u]', copy);
-    var srcBars = $$('.dl2__bar i', half), dstBars = $$('.dl2__bar i', copy);
+    track.appendChild(copy);
+    /* constant speed (~45px/s) whatever the length */
+    track.style.animationDuration = Math.max(18, half.scrollWidth / 45) + 's';
+    /* keep every clone's countdown + progress bar in sync with its original */
+    var pairs = [];
+    pills.forEach(function (orig) {
+      var key = orig.getAttribute('data-eb'); if (!key) return;
+      $$('[data-eb]', track).forEach(function (c) {
+        if (c !== orig && c.getAttribute('data-eb') === key) pairs.push([orig, c]);
+      });
+    });
     setInterval(function () {
-      src.forEach(function (s, k) { if (dst[k].textContent !== s.textContent) dst[k].textContent = s.textContent; });
-      srcBars.forEach(function (s, k) { if (dstBars[k]) dstBars[k].style.cssText = s.style.cssText; });
+      pairs.forEach(function (pr) {
+        var s1 = $$('[data-u]', pr[0]), d1 = $$('[data-u]', pr[1]);
+        s1.forEach(function (x, k) { if (d1[k] && d1[k].textContent !== x.textContent) d1[k].textContent = x.textContent; });
+        var sb = pr[0].querySelector('.dl2__bar i'), db = pr[1].querySelector('.dl2__bar i');
+        if (sb && db) db.style.cssText = sb.style.cssText;
+      });
     }, 500);
   });
 
