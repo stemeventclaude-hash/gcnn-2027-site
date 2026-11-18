@@ -2822,3 +2822,8 @@ body.hx-fixed .hx--inner .hx-nav{background:#faf8f3!important;padding:6px 100px!
 .hx--inner .hx-navwrap{margin-top:0!important;margin-bottom:0!important;margin-inline:100px!important}
 @media (max-width:1280px){.hx--inner .hx-navwrap{margin-inline:32px!important}}
 @media (max-width:760px){.hx--inner .hx-navwrap{margin-inline:16px!important}}
+
+/* gallery hero: key dates panel in place of the archive card */
+.ph__keys .hx-keys{max-width:440px;margin-left:auto;background:linear-gradient(160deg,#26303e,#1c2430 60%,#151b24);border-color:rgba(200,173,132,.35);box-shadow:0 30px 60px -30px rgba(28,36,48,.6)}
+.ph__keys .hx-key__t small{color:rgba(244,239,230,.7)}
+@media (max-width:900px){.ph__keys .hx-keys{margin:20px 0 0;max-width:none}}
