@@ -1663,3 +1663,6 @@ html{scroll-padding-top:200px}
 .hq__grid .hq__meta{margin-bottom:6px}
 .hq__sky{margin-top:-10px!important}
 .hq{padding-top:46px}
+
+/* remove hero frame border */
+.hq::before,.hq::after{display:none!important}
