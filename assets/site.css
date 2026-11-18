@@ -2367,3 +2367,8 @@ body.hx-fixed .hx-nav{position:fixed;top:0;left:0;right:0;z-index:90;border-radi
 .hx-out{display:inline-block;padding:13px 22px;line-height:1.35;text-align:center}
 .hx-out sup{line-height:0}
 @media (max-width:1180px){.hx-nav::before{content:"GCNN 2027";padding-left:8px;font:800 1rem var(--sans);letter-spacing:-.01em;color:#1c2430}}
+
+/* banner: no background photo; logo aligned with the "Global Congress on" line */
+.hx-band{background:radial-gradient(60% 90% at 85% 10%,rgba(200,173,132,.14) 0,transparent 60%),linear-gradient(135deg,#1c2430 0%,#232d3b 55%,#1c2430 100%)!important}
+.hx-band__row{align-items:start}
+.hx-logo{align-self:start;margin-top:0}
