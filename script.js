@@ -110,6 +110,23 @@
     c.addEventListener('pointerleave', function () { c.style.setProperty('--rx', '0deg'); c.style.setProperty('--ry', '0deg'); });
   });
 
+  /* Top strip: deadline pills appear one after another (no scrolling) */
+  $$('.tb2__rot').forEach(function (r) {
+    var pills = $$('.dl2', r); if (!pills.length) return;
+    var i = 0; pills[0].classList.add('is-on');
+    if (pills.length < 2) return;
+    var paused = false;
+    r.addEventListener('mouseenter', function () { paused = true; });
+    r.addEventListener('mouseleave', function () { paused = false; });
+    setInterval(function () {
+      if (paused) return;
+      var cur = pills[i]; i = (i + 1) % pills.length; var nx = pills[i];
+      cur.classList.remove('is-on'); cur.classList.add('is-out');
+      setTimeout(function () { cur.classList.remove('is-out'); }, 700);
+      nx.classList.add('is-on');
+    }, 4500);
+  });
+
   /* dl2-marquee: deadline pills travel one behind the other */
   $$('.dl2-wrap').forEach(function (w) {
     var pills = $$('.dl2', w);
