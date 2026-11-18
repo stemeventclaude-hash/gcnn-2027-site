@@ -1635,3 +1635,17 @@ html{scroll-padding-top:200px}
 .hq{padding-top:44px}
 @media (max-width:900px){.hq__grid .hq__title{white-space:normal}}
 .hq__grid .hq__meta{margin-bottom:18px}
+/* hero v-final: two parts; left part vertically centred; big left-aligned title; rest centred */
+.hq__grid{grid-template-columns:1fr 1fr;min-height:470px}
+.hq__grid .hq__in{align-items:center;justify-content:center;text-align:center}
+.hq__grid .hq__eyebrow span:first-child{display:block}
+.hq__grid .hq__title{align-self:stretch;margin:16px 0 0;text-align:left;white-space:normal;font-size:clamp(3rem,6.4vw,6.4rem);line-height:.98}
+.hq__grid .hq__title .hq__w:first-of-type::after{content:"\A";white-space:pre}
+.hq__grid .hq__theme{margin:20px auto 0;max-width:560px;text-wrap:balance}
+.hq__grid .hq__meta{justify-content:center;margin-bottom:24px}
+.hq__grid .hq__meta li:last-child{flex-basis:100%;justify-content:center;margin-top:6px}
+.hq__grid .hq__meta li:last-child::before{display:none}
+@media (max-width:1080px){.hq__grid{grid-template-columns:1fr;min-height:0}}
+.hq__grid .hq__title .hq__w:first-of-type::after{content:none}
+.hq__grid .hq__title{white-space:nowrap;width:max-content;max-width:none}
+@media (max-width:900px){.hq__grid .hq__title{white-space:normal;width:auto}}
