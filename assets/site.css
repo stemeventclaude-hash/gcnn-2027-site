@@ -2766,3 +2766,17 @@ html{scroll-padding-top:150px}
 .hx2 .hx-cta{gap:8px}
 .hx2 .hx-btn{padding:0 15px}
 @media (max-width:1700px){.hx-mail span{display:none}}
+
+
+/* brochure entry points inside pages (as on the live site) */
+.bro-rib{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin:0 0 18px;padding:14px 18px;border-radius:14px;background:#1c2430;color:#f4efe6}
+.bro-rib__tag{display:inline-flex;align-items:center;gap:7px;padding:5px 12px;border-radius:999px;background:linear-gradient(135deg,#a8824c,#8a6a3b);font:700 .78rem var(--sans);color:#fff}
+.bro-rib__tag svg{width:14px;height:14px;fill:#fff}
+.bro-rib p{flex:1;min-width:220px;margin:0;font-size:.98rem;color:rgba(244,239,230,.85)}
+.bro-rib .btn{background:#faf8f3;color:#1c2430}
+.btn svg{flex:none}
+.btn--sm{height:40px;padding:0 16px;font-size:.88rem}
+.seg-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.seg-row .seg{margin:0}
+.bro-row{display:flex;justify-content:flex-start}
+@media (min-width:1281px){.hx-mail span{display:inline}}
