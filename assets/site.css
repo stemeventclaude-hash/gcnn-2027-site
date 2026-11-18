@@ -2887,3 +2887,8 @@ body.hx-fixed .hx--inner .hx-nav{background:#faf8f3!important;padding:6px 100px!
 .ph__dl--hero{margin:22px 0 0;max-width:460px}
 .ph__dl--hero{max-width:560px}
 .ph__dl--hero .dl b{white-space:nowrap}
+
+/* template cards: name on one line */
+.ph__dl--hero{max-width:640px;grid-template-columns:repeat(2,max-content)}
+.ph__dl--hero .dl{padding-right:22px}
+.ph__dl--hero .dl b,.abs-res .dl b{white-space:nowrap}
