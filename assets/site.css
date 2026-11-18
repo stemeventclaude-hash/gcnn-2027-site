@@ -2254,3 +2254,6 @@ html,body{overflow-anchor:none}
 .tb2__links{order:2}
 .tb2__rot{order:1;padding-left:0;border-left:0;padding-right:26px;border-right:1px solid #ddd2bf}
 @media (max-width:1120px){.tb2__rot{padding-right:0;border-right:0}}
+
+/* Info dropdown: 3 items, single column */
+#nm3{grid-template-columns:1fr!important;width:280px!important;min-width:0!important;column-count:1}
