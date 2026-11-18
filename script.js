@@ -308,6 +308,22 @@
     layout();
   });
 
+  /* Speakers index: floating portrait follows the cursor over each row */
+  $$('[data-sx]').forEach(function (sx) {
+    var fl = $('.sx__float', sx), im = $('img', fl), x = 0, y = 0, cx = 0, cy = 0, raf = null;
+    var loop = function () { cx += (x - cx) * 0.18; cy += (y - cy) * 0.18; fl.style.left = cx + 'px'; fl.style.top = cy + 'px'; raf = requestAnimationFrame(loop); };
+    $$('.sx__row', sx).forEach(function (r) {
+      r.addEventListener('mouseenter', function (e) {
+        var src = r.getAttribute('data-img');
+        if (!src) { fl.classList.remove('is-on'); return; }
+        im.src = src; fl.classList.add('is-on');
+        if (!raf) { cx = x = e.clientX + 170; cy = y = e.clientY; loop(); }
+      });
+      r.addEventListener('mousemove', function (e) { x = e.clientX + 170; y = e.clientY; });
+    });
+    sx.addEventListener('mouseleave', function () { fl.classList.remove('is-on'); cancelAnimationFrame(raf); raf = null; });
+  });
+
   /* Local-preview forms */
   $$('form[data-local]').forEach(function (f) {
     f.addEventListener('submit', function (e) {
