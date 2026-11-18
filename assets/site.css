@@ -2676,3 +2676,12 @@ html{scroll-padding-top:150px}
 .ps-card__aff{margin-top:2px;padding:5px 9px;border-radius:7px;background:#f6eddc;color:#5a4526;-webkit-box-decoration-break:slice;box-decoration-break:slice}
 .ps-card__name{color:#1c2430;text-decoration:underline;text-decoration-color:rgba(138,106,59,.45);text-decoration-thickness:2px;text-underline-offset:4px}
 .ps-card__aff{display:block;-webkit-line-clamp:unset;overflow:visible}
+
+/* speakers: no boxes — photo, then name / affiliation / highlighted country */
+.ps-card{padding:6px 0;border:0;border-radius:0;background:none;box-shadow:none}
+.ps-card:hover{transform:none;box-shadow:none}
+.ps-card__name{text-decoration:none}
+.ps-card__aff{padding:0;border-radius:0;background:none;font-weight:500;color:#5f5a52}
+.ps-card__cty{margin-top:6px;padding:4px 12px;background:linear-gradient(135deg,#a8824c,#8a6a3b);font-size:.8rem;font-weight:700;box-shadow:0 6px 14px -8px rgba(138,106,59,.8)}
+.ps-card__cty svg{stroke:#fff}
+.ps-grid{row-gap:30px}
