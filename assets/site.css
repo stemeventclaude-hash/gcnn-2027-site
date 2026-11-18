@@ -2397,3 +2397,16 @@ body.hx-fixed .hx-nav{position:fixed;top:0;left:0;right:0;z-index:90;border-radi
 @media (max-width:1280px){.hx-logo img{width:190px}.hx-cd b{font-size:2.1rem}.hx-nav .nav__btn{padding:0 9px;font-size:.94rem}}
 @media (max-width:760px){.hx-top__row,.hx-icons{height:auto}.hx-icons{height:42px}.hx-icons a{width:38px}.hx-btn{height:44px;font-size:.95rem}.hx-band{padding:26px 0 24px}.hx-logo img{width:190px}.hx-title{font-size:2.1rem}.hx-line{font-size:1.02rem}.hx-cd b{font-size:1.75rem}.hx-cd div{min-width:50px}.hx-out{font-size:1rem}}
 .hx-ribbon{width:150px;height:150px}.hx-ribbon b{top:30px;left:-6px;width:120px;font-size:.66rem}.hx-ribbon::after{top:44px;left:4px;width:120px;font-size:.6rem}
+
+
+/* ===== New GCNN logo (inline: neural brain emblem + wordmark) ===== */
+.hx-logo.gl{display:flex;align-items:center;gap:14px;padding:0;background:none!important;border:0!important;box-shadow:none!important;text-decoration:none}
+.gl-mark{width:76px;height:76px;flex:none;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35));transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.gl:hover .gl-mark{transform:rotate(-8deg) scale(1.04)}
+.gl-txt{display:flex;flex-direction:column;line-height:1}
+.gl-txt b{display:flex;align-items:baseline;gap:6px;font:800 2.1rem/1 var(--sans);letter-spacing:-.03em;color:#fff}
+.gl-txt b em{font-style:normal;font-weight:700;font-size:.62em;letter-spacing:0;background:linear-gradient(100deg,#c8ad84,#f3e2c2 50%,#b8955f);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.gl-txt small{margin-top:7px;padding-top:6px;border-top:1px solid rgba(200,173,132,.45);font:600 .74rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#e6cfa6}
+.gl-txt i{margin-top:5px;font:500 .72rem var(--sans);font-style:normal;letter-spacing:.06em;color:rgba(244,239,230,.75)}
+@media (max-width:1280px){.gl-mark{width:62px;height:62px}.gl-txt b{font-size:1.8rem}}
+@media (max-width:760px){.gl-mark{width:56px;height:56px}.gl-txt b{font-size:1.6rem}.gl-txt small{font-size:.66rem}}
