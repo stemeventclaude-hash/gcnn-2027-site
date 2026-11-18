@@ -1666,3 +1666,5 @@ html{scroll-padding-top:200px}
 
 /* remove hero frame border */
 .hq::before,.hq::after{display:none!important}
+
+.hq__grid .hq__title{font-size:clamp(2.6rem,5.2vw,5.2rem)}
