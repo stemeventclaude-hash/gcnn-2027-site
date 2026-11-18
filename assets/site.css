@@ -2780,3 +2780,14 @@ html{scroll-padding-top:150px}
 .seg-row .seg{margin:0}
 .bro-row{display:flex;justify-content:flex-start}
 @media (min-width:1281px){.hx-mail span{display:inline}}
+
+/* gallery edition meta: clearer photo count, venue and dates */
+.ged__m--x{display:flex;flex-direction:column;align-items:flex-end;gap:8px;min-width:280px;text-align:right}
+.gm-count{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:linear-gradient(135deg,#a8824c,#8a6a3b);color:#fff;box-shadow:0 8px 18px -10px rgba(138,106,59,.9)}
+.gm-count svg{width:17px;height:17px;fill:none;stroke:#fff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.gm-count b{display:inline;font-size:1rem;font-weight:800;color:#fff}
+.gm-row{display:inline-flex;align-items:flex-start;gap:8px;max-width:360px;font-size:1rem;font-weight:600;line-height:1.4;color:#1c2430}
+.gm-row svg{flex:none;width:18px;height:18px;margin-top:2px;fill:none;stroke:#8a6a3b;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.gm-row:last-child{padding:4px 12px;border-radius:10px;background:#f6eddc;color:#5a4526;font-weight:700}
+@media (max-width:900px){.ged__m--x{align-items:flex-start;text-align:left;min-width:0}}
+.ged__m--x,.ged__m--x *{font-family:var(--sans)!important;letter-spacing:normal!important;text-transform:none!important}
