@@ -2094,3 +2094,45 @@ html,body{overflow-anchor:none}
 }
 @media (max-width:640px){.ft2__word{font-size:15.5vw}}
 @media (max-width:1080px){.hq__grid .hq__meta li::before,.hq__grid .hq__meta li+li::before,.hq__grid .hq__meta li:last-child::before{display:none!important}}
+
+
+/* ===== Hero right: circular early-bird countdown (replaces ticket card) ===== */
+.hqc{position:relative;display:flex;flex-direction:column;align-items:center;justify-self:center;text-align:center}
+.hqc .dl2__bar{display:none}
+.hqc__ring{position:relative;width:290px;height:290px;border-radius:50%;
+  background:radial-gradient(circle at 50% 38%,#fff 0,#fbf7ef 55%,#f1e8d7 100%);
+  box-shadow:0 40px 70px -40px rgba(28,36,48,.5),0 0 0 10px rgba(255,255,255,.55),0 0 0 11px rgba(200,173,132,.35);
+  opacity:0;transform:scale(.85);animation:hqc-pop 1.1s cubic-bezier(.2,.8,.2,1) .3s forwards}
+@keyframes hqc-pop{to{opacity:1;transform:none}}
+/* soft breathing glow behind the ring */
+.hqc__ring::before{content:"";position:absolute;inset:-34px;z-index:-1;border-radius:50%;background:radial-gradient(circle,rgba(200,173,132,.38) 0,rgba(200,173,132,0) 68%);animation:hqc-breathe 4s ease-in-out infinite}
+@keyframes hqc-breathe{0%,100%{transform:scale(.92);opacity:.55}50%{transform:scale(1.06);opacity:1}}
+.hqc__svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);overflow:visible}
+.hqc__ticks{fill:none;stroke:#c8ad84;stroke-width:1;stroke-dasharray:1 5.2;opacity:.7;transform-origin:100px 100px;animation:hqc-turn 90s linear infinite}
+@keyframes hqc-turn{to{transform:rotate(360deg)}}
+.hqc__track{fill:none;stroke:#ece2cf;stroke-width:9}
+.hqc__prog{fill:none;stroke:#8a6a3b;stroke-width:9;stroke-linecap:round;stroke-dasharray:0 100;transition:stroke-dasharray 1.8s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 0 4px rgba(200,173,132,.7))}
+.hqc__orbit{position:absolute;inset:-14px;border-radius:50%;border:1px dashed rgba(138,106,59,.3);animation:spin 40s linear infinite}
+.hqc__orbit i{position:absolute;top:-5px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#1c2430;box-shadow:0 0 0 4px rgba(200,173,132,.45)}
+.hqc__mid{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.hqc__lbl{margin:0;padding:5px 12px;border-radius:999px;background:#1c2430;color:#e6cfa6;font:700 .62rem var(--mono);letter-spacing:.24em;text-transform:uppercase}
+.hqc__days{display:block;margin-top:6px;font-size:5.2rem;font-weight:800;line-height:1;letter-spacing:-.05em;color:#1c2430;background:linear-gradient(100deg,#1c2430 0%,#1c2430 40%,#8a6a3b 50%,#1c2430 60%,#1c2430 100%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:hqc-shine 5s ease-in-out 1.5s infinite}
+@keyframes hqc-shine{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+.hqc__unit{margin:2px 0 0;font:600 .7rem var(--mono);letter-spacing:.22em;text-transform:uppercase;color:#8a6a3b}
+.hqc__hms{margin:10px 0 0;padding-top:8px;border-top:1px solid #e3d6bf;font:700 1rem var(--mono);color:#1c2430}
+.hqc__hms span{display:inline-block}
+.hqc__hms span.tick{animation:hqc-tick .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes hqc-tick{0%{transform:translateY(-55%);opacity:0}100%{transform:none;opacity:1}}
+.hqc__hms small{margin:0 6px 0 1px;font-size:.66rem;font-weight:500;color:#8a6a3b}
+.hqc__hms small:last-child{margin-right:0}
+.hqc__date,.hqc__meta{opacity:0;transform:translateY(12px);animation:hqc-up .8s ease forwards}
+.hqc__date{margin:30px 0 0;font-size:1.05rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#1c2430;animation-delay:.9s}
+.hqc__meta{display:flex;gap:18px;margin:8px 0 0;font-size:.9rem;font-weight:600;color:#3b4452;animation-delay:1.05s}
+@keyframes hqc-up{to{opacity:1;transform:none}}
+.hqc__meta span{display:inline-flex;align-items:center;gap:6px}
+.hqc__meta svg{width:16px;height:16px;fill:none;stroke:#8a6a3b;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media (min-width:1081px){.hq__grid{grid-template-columns:minmax(0,1fr) 360px!important}}
+@media (max-width:1080px){.hqc{justify-self:center;margin:8px 0 18px}}
+@media (max-width:480px){.hqc__ring{width:250px;height:250px}.hqc__days{font-size:4.4rem}}
+@media (prefers-reduced-motion:reduce){.hqc__ring,.hqc__date,.hqc__meta{animation:none;opacity:1;transform:none}.hqc__orbit,.hqc__ticks,.hqc__ring::before,.hqc__days{animation:none}}
+@media (min-width:1081px){.hqc__ring{width:248px;height:248px}.hqc__days{font-size:4.4rem}.hqc__date{margin-top:24px;font-size:.98rem}.hqc__meta{margin-top:6px}}

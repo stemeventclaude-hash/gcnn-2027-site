@@ -86,6 +86,17 @@
     run(); setInterval(run, 1000);
   });
 
+  /* Hero circular countdown: ring fills to the share of the early-bird window already passed */
+  $$('.hqc__ring').forEach(function (r) {
+    var end = Date.parse(r.getAttribute('data-eb')), start = Date.parse('2026-09-01T00:00:00+02:00');
+    var prog = r.querySelector('.hqc__prog');
+    var upd = function () {
+      var p = Math.min(100, Math.max(0, (Date.now() - start) / (end - start) * 100));
+      prog.style.strokeDasharray = p.toFixed(2) + ' 100';
+    };
+    setTimeout(function () { upd(); setInterval(upd, 1000); }, 700);
+  });
+
   /* dl2-marquee: deadline pills travel one behind the other */
   $$('.dl2-wrap').forEach(function (w) {
     var pills = $$('.dl2', w);
