@@ -2757,3 +2757,12 @@ html{scroll-padding-top:150px}
 
 .ps-heading--fs{font-size:clamp(2.2rem,4vw,3.4rem);letter-spacing:-.035em}
 .ps-heading--fs em{font-style:normal;color:#8a6a3b}
+
+.hx-btn--dl{gap:7px;cursor:pointer;font:inherit;font-weight:700}
+.hx-btn--dl svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.hx2 .hx-btn{font-size:.9rem}
+@media (max-width:760px){.hx-cta{flex-wrap:wrap}.hx-btn--dl{flex-basis:100%}}
+.hx2 .hx-btn,.hx-chip{white-space:nowrap}
+.hx2 .hx-cta{gap:8px}
+.hx2 .hx-btn{padding:0 15px}
+@media (max-width:1700px){.hx-mail span{display:none}}
