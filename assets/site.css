@@ -2864,3 +2864,7 @@ body.hx-fixed .hx--inner .hx-nav{background:#faf8f3!important;padding:6px 100px!
 .abs-center .box-ink strong{grid-column:1}
 .abs-center .box-ink p{grid-column:2;grid-row:1/3;margin:0}
 @media (max-width:700px){.abs-center .box-ink{display:block}}
+
+/* hero text stays level with the Key dates panel when templates sit under it */
+.ph__grid:has(.ph__dl){align-items:start}
+.ph__grid:has(.ph__dl)>div:first-child{padding-top:40px}
