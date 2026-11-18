@@ -2630,3 +2630,8 @@ html{scroll-padding-top:150px}
 .fs-flip .fs-card__body{transform:none}
 .fs-flip .fs-card__name,.fs-flip .fs-card__affiliation{z-index:4}
 .fs-flip .fs-card__shade{z-index:3}
+
+/* menu bar: items from the left edge to Contact on the right, even small gaps */
+@media (min-width:1181px){.hx2 .hx-nav{padding:8px}.hx2 .hx-nav__list{flex:1;justify-content:space-between!important;gap:4px}.hx2 .hx-nav .nav__btn{padding:0 18px;font-size:1.04rem}.hx2 .hx-nav__cta{margin-left:14px}}
+@media (min-width:1181px) and (max-width:1400px){.hx2 .hx-nav .nav__btn{padding:0 12px;font-size:.98rem}}
+@media (min-width:1700px){.hx2 .hx-nav .nav__btn{padding:0 26px;font-size:1.1rem}}
