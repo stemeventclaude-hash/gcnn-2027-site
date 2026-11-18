@@ -2372,3 +2372,28 @@ body.hx-fixed .hx-nav{position:fixed;top:0;left:0;right:0;z-index:90;border-radi
 .hx-band{background:radial-gradient(60% 90% at 85% 10%,rgba(200,173,132,.14) 0,transparent 60%),linear-gradient(135deg,#1c2430 0%,#232d3b 55%,#1c2430 100%)!important}
 .hx-band__row{align-items:start}
 .hx-logo{align-self:start;margin-top:0}
+
+/* banner: same design, everything a size bigger */
+.hx-top__row,.hx-icons{height:70px}
+.hx-icons a{width:58px}.hx-icons svg{width:21px;height:21px}
+.hx-btn{height:50px;padding:0 26px;font-size:1.08rem}
+.hx-ribbon{width:170px;height:170px}
+.hx-ribbon b{top:36px;left:-2px;width:136px;font-size:.74rem}
+.hx-ribbon::after{top:52px;left:8px;width:136px;font-size:.66rem}
+.hx-band{padding:46px 0 34px}
+.hx-band__row{gap:38px}
+.hx-logo{padding:16px 18px}.hx-logo img{width:240px}
+.hx-pill{padding:6px 18px;font-size:1.12rem}
+.hx-title{margin-top:14px}
+.hx-line{margin-top:14px;font-size:1.22rem}.hx-line svg{width:22px;height:22px}
+.hx-cd{padding:14px 18px;gap:8px}.hx-cd div{min-width:60px}.hx-cd b{font-size:2.5rem}.hx-cd i{font-size:2rem}.hx-cd small{font-size:.72rem}
+.hx-dl{gap:18px;margin-top:34px}
+.hx-out{padding:16px 26px;font-size:1.14rem}
+.hx-navwrap{margin-top:34px}
+.hx-nav{padding:10px 12px}
+.hx-nav .nav__btn{height:52px;font-size:1.08rem}
+@media (min-width:1181px){.hx-title{font-size:clamp(2.1rem,2.75vw,3.2rem)}}
+@media (max-width:1400px){.hx-nav .nav__btn{padding:0 12px;font-size:1rem}}
+@media (max-width:1280px){.hx-logo img{width:190px}.hx-cd b{font-size:2.1rem}.hx-nav .nav__btn{padding:0 9px;font-size:.94rem}}
+@media (max-width:760px){.hx-top__row,.hx-icons{height:auto}.hx-icons{height:42px}.hx-icons a{width:38px}.hx-btn{height:44px;font-size:.95rem}.hx-band{padding:26px 0 24px}.hx-logo img{width:190px}.hx-title{font-size:2.1rem}.hx-line{font-size:1.02rem}.hx-cd b{font-size:1.75rem}.hx-cd div{min-width:50px}.hx-out{font-size:1rem}}
+.hx-ribbon{width:150px;height:150px}.hx-ribbon b{top:30px;left:-6px;width:120px;font-size:.66rem}.hx-ribbon::after{top:44px;left:4px;width:120px;font-size:.6rem}
