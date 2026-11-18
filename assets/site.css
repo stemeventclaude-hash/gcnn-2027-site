@@ -2876,3 +2876,10 @@ body.hx-fixed .hx--inner .hx-nav{background:#faf8f3!important;padding:6px 100px!
 .ext--bro{display:grid;place-items:center;background:#1c2430}
 .ext--bro svg{width:20px;height:20px;fill:none;stroke:#e6cfa6;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 @media (max-width:700px){.abs-res{grid-template-columns:1fr}}
+
+/* inner hero: tighter space above breadcrumb and between breadcrumb and title */
+.ph{padding-top:26px}
+.crumbs{margin-bottom:10px}
+.ph__grid{align-items:start}
+.ph__grid>div:first-child{padding-top:0!important}
+.ph__grid:has(.ph__keys)>div:first-child{padding-top:24px!important}
