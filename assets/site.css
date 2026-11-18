@@ -2982,3 +2982,7 @@ body.hx-fixed .hx--inner .hx-nav{background:#faf8f3!important;padding:6px 100px!
 @media (max-width:640px){.ab10{padding:64px 0}.ab10__media{grid-template-rows:200px 170px}.ab10__f--b,.ab10__f--c{grid-row:2}.ab10__stats{position:relative;left:auto;bottom:auto;transform:none;width:100%;grid-column:1/-1;grid-template-columns:repeat(2,1fr);row-gap:14px}.ab10__stats div:nth-child(3){border-left:0}.ab10__pts{margin-top:28px}}
 .ab10__f--c figcaption{left:auto;right:14px;bottom:auto;top:14px}
 .ab10__f--c img{object-position:50% 22%}
+
+/* less gap between tracks button and About */
+.sn-sec{padding-bottom:36px!important}
+.ab10{padding-top:44px!important}
