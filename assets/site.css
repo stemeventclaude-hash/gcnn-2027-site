@@ -2041,3 +2041,7 @@ html,body{overflow-anchor:none}
 .hq__ground{stroke-width:1.6;opacity:.85}
 /* river waves back under the skyline */
 .hq__river{display:inline}
+/* first screen ends exactly on the skyline ground line; the river waves (40/1440 of the width) sit just below the fold */
+@media (min-width:1081px){
+  .hq{min-height:calc(100vh - var(--hdrh,186px) + 2.78vw);min-height:calc(100svh - var(--hdrh,186px) + 2.78vw)}
+}
