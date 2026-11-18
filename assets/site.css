@@ -2892,3 +2892,13 @@ body.hx-fixed .hx--inner .hx-nav{background:#faf8f3!important;padding:6px 100px!
 .ph__dl--hero{max-width:640px;grid-template-columns:repeat(2,max-content)}
 .ph__dl--hero .dl{padding-right:22px}
 .ph__dl--hero .dl b,.abs-res .dl b{white-space:nowrap}
+
+/* brochure dialog: live-site wording */
+.dlg__eye{display:inline-flex;align-items:center;gap:8px;padding:4px 12px;border-radius:999px;background:#f6eddc;font:700 .72rem var(--mono);letter-spacing:.14em;color:#8a6a3b}
+.dlg__pulse{width:8px;height:8px;border-radius:50%;background:#8a6a3b;box-shadow:0 0 0 4px rgba(200,173,132,.35)}
+.dlg .field textarea{min-height:80px}
+.dlg .consent{font-size:.8rem}
+#brochure{max-height:calc(100vh - 40px);overflow-y:auto}
+#brochure h2{font-size:1.6rem;margin-top:10px}
+#brochure .field input,#brochure .field select{padding:10px 13px}
+#brochure .fgrid{gap:12px 16px}
